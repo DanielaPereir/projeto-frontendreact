@@ -1,11 +1,21 @@
-import Itens from "../../ShoppingCart/Itens/Itens"
-import ProductCard from "../ProductCard/ProductCard"
+import { StyledMain, ProductContainer, SortContainer } from './HomeStyle';
+import ProductCard from '../ProductCard/ProductCard';
 const Home = (props) => {
     return (
-        <>
-            <p>{props.nome}</p>
-            <ProductCard nome="ProductCard" />
-        </>
-        )
-}
-export default Home
+        <StyledMain>
+            <SortContainer>
+                <p>Quantidade de produtos:</p>
+                <select>
+                    <option value="Crescente">Crescente</option>
+                    <option value="Decrescente">Descrescente</option>
+                </select>
+            </SortContainer>
+            <ProductContainer>
+                <ProductCard nome="ProductCard" />
+                <ProductCard nome="ProductCard" />
+                <ProductCard nome="ProductCard" />
+            </ProductContainer>
+        </StyledMain>
+    );
+};
+export default Home;
