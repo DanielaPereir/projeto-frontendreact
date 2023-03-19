@@ -1,9 +1,11 @@
 import { StyleArticle } from "./ProductCardStyle"
-const ProductCard = ({imagem, nome, preco}) => { return (
+
+
+const ProductCard = (props) => { return (
     <StyleArticle>
-        <img src={imagem} alt="" />
-        <p>{"Blusa"}</p>
-        <p>{"34$"}</p>
+        <img src={props.imageUrl} alt="" />
+        <p>{props.name}</p>
+        <p>{props.value}</p>
         <button>Adicionar ao carrinho</button>
     </StyleArticle>
 ) }
